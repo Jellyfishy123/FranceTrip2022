@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+body {
+	min-height: 100vh;
+	background: url(/France2022img/background.webp);
+}
+
+.snow, .snow2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300%;
+	background: url(/France2022img/snow.png);
+	background-position: 0 0;
+	z-index: -1;
+}
+
+.snow {
+	background-size: 70em;
+	animation:
+		snowfall 30s linear infinite;
+}
+
+.snow2 {
+	background-size: 50em;
+	animation:
+		snowfall 30s linear infinite;
+	opacity: 0.5;
+}
+
+.text {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	z-index: 0;
+}
+
+@keyframes snowfall {
+	100% {
+		background-position: 70em 70em;
+	}
+}
+
+@keyframes snowfall2 {
+	100% {
+		background-position: 50em 0;
+	}
+}
